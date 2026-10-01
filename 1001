@@ -1,1 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專題題目一：汽油價格與公共運輸需求的交叉彈性研究——以台北捷運與 YouBike 為例</title>
+    <style>
+        :root {
+            --primary-color: #005A9C;
+            --secondary-color: #F58220;
+            --text-color: #2D3748;
+            --bg-color: #F7FAFC;
+            --card-bg: #FFFFFF;
+            --border-color: #E2E8F0;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 1.75rem;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 0.75rem;
+            margin-top: 0;
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-top: 1.75rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 1.2rem;
+            background-color: var(--secondary-color);
+            margin-right: 8px;
+            border-radius: 2px;
+        }
+
+        .hypothesis-box {
+            background-color: #EBF8FF;
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem 1.25rem;
+            margin-bottom: 1rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .hypothesis-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+            margin-top: 0;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+        }
+
+        .chart-item {
+            background-color: #FAF5FF;
+            border: 1px solid #E9D8FD;
+            padding: 1rem 1.25rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .chart-title {
+            font-weight: bold;
+            color: #6B46C1;
+            margin-bottom: 0.5rem;
+        }
+
+        .chart-detail {
+            font-size: 0.95rem;
+            color: #4A5568;
+        }
+
+        .chart-purpose {
+            margin-top: 0.5rem;
+            font-weight: 500;
+            color: #2C5282;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>專題題目一：汽油價格與公共運輸需求的交叉彈性研究——以台北捷運與 YouBike 為例</h1>
+
+    <section>
+        <h2>1. 研究假說 (Hypothesis)</h2>
+        <div class="hypothesis-box">
+            <div class="hypothesis-title">H₁（替代效應假說）</div>
+            當國內汽油價格（如 95 無鉛汽油）上漲時，私人（private）機車/汽車通勤成本增加，會促使民眾轉向使用台北捷運與 YouBike，使運量呈現顯著正向成長。
+        </div>
+        <div class="hypothesis-box">
+            <div class="hypothesis-title">H₂（距離差異假說）</div>
+            油價上漲對中長程的「捷運運量」影響幅度（彈性），會大於對短程「YouBike 運量」的影響幅度。
+        </div>
+    </section>
+
+    <section>
+        <h2>2. 經濟學理傳導機制</h2>
+        <p><strong>需求交叉價格彈性 (Cross-Price Elasticity of Demand)：</strong></p>
+        <p>私人（private）交通工具（汽機車）與大眾運輸（捷運、YouBike）屬於替代商品。當汽油價格上升，使用私有車輛的邊際成本提高，邊際替代率（MRS）改變，誘發消費者產生 substitution effect（替代效應），轉向消費大眾運輸工具。</p>
+    </section>
+
+    <section>
+        <h2>3. 建議採用的數據視覺化圖表</h2>
+        
+        <div class="chart-item">
+            <div class="chart-title">雙 Y 軸折線圖 (Dual Y-Axis Line Chart)</div>
+            <div class="chart-detail">
+                <ul>
+                    <li><strong>左 Y 軸：</strong>國內每月平均汽油價格（元/公升）</li>
+                    <li><strong>右 Y 軸：</strong>台北捷運 / YouBike 每月總運量（萬人次）</li>
+                </ul>
+            </div>
+            <div class="chart-purpose">💡 目的：一眼看出油價高低點與運量波動是否具備同向變化趨勢。</div>
+        </div>
+
+        <div class="chart-item">
+            <div class="chart-title">散佈圖與迴歸趨勢線 (Scatter Plot with Regression Line)</div>
+            <div class="chart-detail">
+                <ul>
+                    <li><strong>X 軸：</strong>油價變動率 (%)</li>
+                    <li><strong>Y 軸：</strong>捷運或 YouBike 運量變動率 (%)</li>
+                </ul>
+            </div>
+            <div class="chart-purpose">💡 目的：直觀展示兩者的相關性強度與斜率（即交叉彈性的大小）。</div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
