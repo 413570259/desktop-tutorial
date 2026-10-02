@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 與經濟研究報告平台 | Economic & AI Research Hub</title>
+    <style>
+        :root {
+            --primary-color: #0F172A;
+            --accent-color: #2563EB;
+            --accent-hover: #1D4ED8;
+            --secondary-accent: #0D9488;
+            --text-main: #334155;
+            --text-muted: #64748B;
+            --bg-main: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --border-color: #E2E8F0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-main);
+            padding-bottom: 3rem;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            color: #FFFFFF;
+            padding: 4rem 1.5rem 3.5rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(37, 99, 235, 0.2);
+            color: #60A5FA;
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            padding: 0.3rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        header h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #94A3B8;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: -2rem auto 0;
+            padding: 0 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.35rem;
+            color: var(--primary-color);
+            margin: 2.5rem 0 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Research Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.75rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            border-color: #CBD5E1;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--secondary-accent);
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background-color: var(--accent-color);
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 0.65rem 1.25rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+
+        .card-btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .card-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        /* Coming Soon Card Style */
+        .card.disabled {
+            opacity: 0.75;
+            background-color: #F1F5F9;
+        }
+
+        .card.disabled .card-btn {
+            background-color: #94A3B8;
+            cursor: not-allowed;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <span class="badge">Econ & AI Research Platform</span>
+            <h1>AI 與經濟研究報告中心</h1>
+            <p>運用數據分析、計量經濟學與人工智慧模型，探索公共政策、市場機制與經濟行為之實證研究。</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2 class="section-title">
+            <span>最新專題研究報告</span>
+        </h2>
+
+        <div class="grid">
+            
+            <!-- 專題一卡片 (已完工連結) -->
+            <div class="card">
+                <div>
+                    <div class="card-tag">專題題目一 · 實證經濟學</div>
+                    <h3>汽油價格與公共運輸需求的交叉彈性研究</h3>
+                    <p>以台北捷運與 YouBike 為例，探討國內汽油價格上漲對大眾運輸工具運量的替代效應，並分析中長程與短程運量之交叉彈性差異。</p>
+                </div>
+                <a href="交叉彈性研究.html" class="card-btn">
+                    檢視完整報告
+                    <svg viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 預留卡片 1 -->
+            <div class="card disabled">
+                <div>
+                    <div class="card-tag">專題題目二 · AI 與勞動市場</div>
+                    <h3>生成式 AI 對知識型產業薪資與就業結構之影響</h3>
+                    <p>結合 NLP 文本探勘與實證迴歸模型，分析生成式 AI 技術引進後，資訊服務業與金融業之人力需求變動。</p>
+                </div>
+                <a href="#" class="card-btn" onclick="return false;">研究籌備中</a>
+            </div>
+
+            <!-- 預留卡片 2 -->
+            <div class="card disabled">
+                <div>
+                    <div class="card-tag">專題題目三 · 房地產經濟</div>
+                    <h3>升息循環與央行信用管制對區域房價之傳導機制</h3>
+                    <p>運用時間序列模型與空間計量分析，評估貨幣政策對六都房巿價量關係之衝擊與滯後效應。</p>
+                </div>
+                <a href="#" class="card-btn" onclick="return false;">研究籌備中</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 AI 與經濟研究小組 | Academic & Policy Research Hub</p>
+    </footer>
+
+</body>
+</html>
